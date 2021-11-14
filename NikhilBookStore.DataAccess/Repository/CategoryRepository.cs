@@ -17,5 +17,10 @@ namespace NikhilBookStore.DataAccess.Repository
         {
             _db = db;
         }
+
+        public void update(Category category)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
