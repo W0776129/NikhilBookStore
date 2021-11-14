@@ -20,7 +20,12 @@ namespace NikhilBookStore.DataAccess.Repository
 
         public void update(Category category)
         {
-            throw new NotImplementedException();
+            var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == category.Id);
+            if(objFromDb != null)
+            {
+                objFromDb.Name = category.Name;
+                _db.SaveChanges();
+            }
         }
     }
 }
