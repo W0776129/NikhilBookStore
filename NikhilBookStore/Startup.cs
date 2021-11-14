@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using NikhilBookStore.DataAccess.Data;
+
+using NikhilBookStore.DataAccess.Repository.IRepository;
+using NikhilBookStore.DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +38,7 @@ namespace NikhilBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
             services.AddControllersWithViews();
         }
 
