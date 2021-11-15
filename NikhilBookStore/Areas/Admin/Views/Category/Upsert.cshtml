@@ -2,16 +2,17 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     var title = "Create Table";
-    if(Model.Id != 0)
-    {
-        title = "Edit Category";
-    }
+    
 }
 
 
 <form method="post">
     <div class="row p-3 border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if(Model.Id != 0)
+        {
+        title = "Edit Category";
+        }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
         </div>
@@ -21,7 +22,7 @@
                     <label asp-for="Name"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Name" class="form-control"/>
+                    <input asp-for="Name" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
             </div>
@@ -29,10 +30,10 @@
                 <div class="col-8 offset-4">
                     @if (Model.Id != 0)
                     {
-                <partial name="_EditAndBackToListButton" model="Model.Id"></partial>
+                        <partial name="_EditAndBackToListButton" model="Model.Id"/>
                     }
                     else
-                    { <partial name="_CreateAndBackToListButton"/>}
+                    { <partial name="_CreateAndBackToListButton" />}
                 </div>
             </div>
         </div>
