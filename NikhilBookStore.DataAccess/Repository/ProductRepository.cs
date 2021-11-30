@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 using NikhilBookStore.DataAccess.Repository.IRepository;
 using NikhilBookStore.Models;
 using NikhilBookStore.DataAccess.Data;
-using System.Linq.Expressions;
 
 namespace NikhilBookStore.DataAccess.Repository
 {
-    public class ProductRepository : Repository<CoverType>, IProductRepository
+    public class ProductRepository : Repository<Product>, IProductRepository
     {
         private readonly ApplicationDbContext _db;
 
@@ -18,33 +17,6 @@ namespace NikhilBookStore.DataAccess.Repository
         {
             _db = db;
         }
-
-        public void Add(Product entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Product> GetAll(Expression<Func<Product, bool>> filter = null, Func<IQueryable<Product>, IOrderedQueryable<Product>> orderBy = null, string includeProperties = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Product GetFirstOrDefault(Expression<Func<Product, bool>> filter = null, string includeProperties = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Product entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveRange(IEnumerable<Product> entity)
-        {
-            throw new NotImplementedException();
-        }
-
-
 
         public void Update(Product product)
         {
@@ -63,11 +35,6 @@ namespace NikhilBookStore.DataAccess.Repository
                 objFromDb.CategoryId = product.CategoryId;
                 objFromDb.CoverTypeId = product.CoverTypeId; // all properties of Product object
             }
-        }
-
-        Product IRepository<Product>.Get(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 
