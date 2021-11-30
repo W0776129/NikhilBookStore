@@ -14,6 +14,8 @@ namespace NikhilBookStore.DataAccess.Repository.IRepository
 
         ICoverTypeRepository CoverType { get; }
 
+        IProductRepository Product { get; }
+
         void Save();
     }
 }
