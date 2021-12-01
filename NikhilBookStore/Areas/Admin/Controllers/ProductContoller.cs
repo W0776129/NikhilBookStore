@@ -54,7 +54,7 @@ namespace NikhilBookStore.Areas.Admin.Controllers
             return View(productVM);
         }
 
-        /*
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(Product product)
@@ -77,7 +77,7 @@ namespace NikhilBookStore.Areas.Admin.Controllers
 
             return View(product);
         }
-        */
+        
 
         #region API CALLS
         [HttpGet]
