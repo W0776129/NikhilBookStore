@@ -290,7 +290,7 @@ namespace NikhilBookStore.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
+                    b.HasIndex("CoverTypeId");
                     b.ToTable("Products");
                 });
 
@@ -355,7 +355,7 @@ namespace NikhilBookStore.DataAccess.Migrations
 
                     b.HasOne("NikhilBookStore.Models.CoverType", "CoverType")
                         .WithMany()
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("CoverTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
