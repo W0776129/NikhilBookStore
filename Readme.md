@@ -159,7 +159,30 @@ Break
 1:58PM error solved for loading product entry page
  
 
+2021-12-06
 
+9:33AM Starting Analysing Github link provided https://github.com/Rico-Jose/BulkyBook
+9:39AM Modified  ProductController.cs
+9:41AM Product.cs Model updated
+9:45AM ProductRepository.cs modified new criteria added in update method
+9:50AM SD.cs Class update
+9:56AM Product upsert view updated
+10:00AM HomeController updated in Customers area
+10:07AM Views for customer area updated
+10:10AM Datbase error need to update database
 
+40Min
 
+Break
 
+10:49AM Migration added 20211206154419_AddProductToDb1
+11:01AM Some error for fetching data customer view is fine
+
+20Min
+
+Break
+
+12:15AM View update and try to solve error.
+10 Min
+
+Till now Total time spent on Part 4 is 70 Min
